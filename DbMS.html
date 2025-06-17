@@ -134,7 +134,7 @@
     <a href="#security">DB Security</a>
   </nav>
 
-  <main>
+<main>
 <section id="data">
   <h1>Database Management System</h1>
 
@@ -236,5 +236,104 @@
       </ul>
     </section>
 
-    <section id="models">
-      <h2>Types of Database Model
+<section id="models">
+      <h2>Types of Database Models</h2>
+      <ul>
+        <li><strong>Hierarchical:</strong> Parent-child relationship.</li>
+        <li><strong>Network:</strong> Many-to-many relationship.</li>
+        <li><strong>Relational:</strong> Tables linked by keys.</li>
+        <li><strong>Entity-Relational:</strong> Diagrammatic structure.</li>
+      </ul>
+    </section>
+
+    <section id="integrity">
+      <h2>Integrity Constraints</h2>
+      <ul>
+        <li><strong>Domain:</strong> Values must be valid types.</li>
+        <li><strong>Entity:</strong> Each row must be unique.</li>
+        <li><strong>Referential:</strong> Foreign key must match primary key.</li>
+        <li><strong>Keys:</strong> Unique identifiers.</li>
+      </ul>
+    </section>
+
+    <section id="normalization">
+      <h2>Normalization</h2>
+      <p>Normalization is a database design technique that reduces redundancy and dependency by organizing fields and table of data.</p>
+
+      <h3>Normal Forms</h3>
+      <ul>
+        <li>1NF – Atomic values</li>
+        <li>2NF – No partial dependency</li>
+        <li>3NF – No transitive dependency</li>
+      </ul>
+
+      <h3>Advantages</h3>
+      <ul>
+        <li>Removes redundancy</li>
+        <li>Improves consistency</li>
+      </ul>
+
+      <h3>Disadvantages</h3>
+      <ul>
+        <li>More complex queries</li>
+      </ul>
+    </section>
+
+    <section id="centralized">
+      <h2>Centralized vs Distributed Databases</h2>
+      <p>Centralized database is located at a single location, whereas distributed database is stored across multiple sites.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Centralized</th>
+            <th>Distributed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Speed</td>
+            <td>Slower</td>
+            <td>Faster</td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td>Low</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Failure Risk</td>
+            <td>High</td>
+            <td>Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="security">
+      <h2>Database Security</h2>
+      <h3>Challenges</h3>
+      <ul>
+        <li>Hacking and unauthorized access</li>
+        <li>Internal misuse</li>
+        <li>Loss or corruption of data</li>
+      </ul>
+
+      <h3>Security Measures</h3>
+      <ul>
+        <li>Authentication and Access Control</li>
+        <li>Encryption</li>
+        <li>Auditing and Monitoring</li>
+      </ul>
+
+      <h3>Roles of DBA</h3>
+      <ul>
+        <li>Ensuring availability and integrity</li>
+        <li>Monitoring performance</li>
+        <li>Controlling access</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
