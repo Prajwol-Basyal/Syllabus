@@ -82,6 +82,40 @@
         margin-left: 0;
       }
     }
+    .accordion-button {
+  background-color: #e63946;
+  color: white;
+  padding: 12px;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.accordion-button:hover {
+  background-color: #d62828;
+}
+
+.accordion-content {
+  background-color: #f8f9fa;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  padding: 0 12px;
+  border-left: 4px solid #e63946;
+  border-radius: 0 0 6px 6px;
+}
+
+.accordion-content p, .accordion-content ul {
+  margin: 10px 0;
+  padding: 0;
+}
+
   </style>
 </head>
 <body>
@@ -101,31 +135,64 @@
   </nav>
 
   <main>
-    <section id="data">
-      <h1>Database Management System</h1>
-      <h2>Data</h2>
-      <p>Data refers to raw, unorganized facts that need to be processed. It can be something simple and seemingly random or useless until it is organized.</p>
+<section id="data">
+  <h1>Database Management System</h1>
 
-      <h2>Information</h2>
-      <p>Information is data that has been processed in such a way as to be meaningful to the person who receives it. It is data made useful.</p>
-    </section>
+  <h2>Data</h2>
+  <p>Data refers to raw facts and figures that by themselves may not carry specific meaning. It can be numbers, characters, symbols, images, or even sounds collected through observation, measurement, or research. Examples include names, dates, sales numbers, temperatures, or sensor readings. Data on its own doesn’t provide insights — it needs to be processed or interpreted. There are various types of data:</p>
+  <ul>
+    <li><strong>Qualitative vs Quantitative:</strong> Descriptive vs measurable values.</li>
+    <li><strong>Structured vs Unstructured:</strong> Organized in a format like tables vs unorganized like text or images.</li>
+    <li><strong>Primary vs Secondary:</strong> Original data collected first-hand vs data gathered from existing sources.</li>
+  </ul>
+  <p>Proper data collection is critical for accurate analysis, decision-making, and building databases.</p>
 
-    <section id="features">
-      <h2>Features of Information</h2>
+  <h2>Information</h2>
+  <p>Information is the result of processing, organizing, and structuring data to make it meaningful and useful. For example, while “75, 60, 80” are just numbers (data), stating that “The average temperature for the week is 71°F” gives context — and becomes information. Information enables decisions, supports analysis, and helps in communication. It is:</p>
+  <ul>
+    <li><strong>Contextual:</strong> Related to a specific purpose or need</li>
+    <li><strong>Timely:</strong> Delivered when it’s needed the most</li>
+    <li><strong>Accurate & Relevant:</strong> Useful and reliable for the task at hand</li>
+  </ul>
+  <p>In database systems, information is the ultimate goal of storing and manipulating data.</p>
+</section>
+
+<section id="features">
+  <h2>Features of Information</h2>
+  <p>High-quality information is essential for effective decision-making, problem-solving, and communication within organizations and systems. The value of information lies in several key characteristics that ensure its usefulness and reliability:</p>
+  <ul>
+    <li><strong>Accuracy:</strong> Information must be free from errors and reflect reality. Inaccurate data can lead to poor decisions and failed operations.</li>
+    <li><strong>Relevance:</strong> The information should be applicable and useful for the task or decision at hand. Irrelevant details distract and confuse.</li>
+    <li><strong>Timeliness:</strong> Up-to-date information ensures prompt and effective responses. Outdated data can mislead users and cause delays.</li>
+    <li><strong>Completeness:</strong> Information should include all necessary data points required to understand a situation or make a decision.</li>
+    <li><strong>Understandability:</strong> Information should be presented in a clear, logical, and easy-to-digest format so it can be interpreted correctly.</li>
+    <li><strong>Verifiability:</strong> Information must be traceable to a reliable source or confirmed by a known method of validation.</li>
+  </ul>
+  <p>These features collectively ensure that information serves its purpose effectively in both databases and business environments.</p>
+</section>
+<section id="purpose">
+  <h2>Database and Its Purpose</h2>
+  <div class="accordion">
+    <button class="accordion-button">What is a Database?</button>
+    <div class="accordion-content">
+      <p>A database is an organized collection of related data that is stored and accessed electronically. Instead of relying on scattered files, databases allow for structured storage using tables, indexes, and keys. This structured approach supports fast access, easy manipulation, and efficient management of large volumes of information.</p>
+    </div>
+
+    <button class="accordion-button">Why Use a Database?</button>
+    <div class="accordion-content">
+      <p>Databases are used in nearly every field — from schools to businesses to apps — because they offer:</p>
       <ul>
-        <li>Accurate</li>
-        <li>Relevant</li>
-        <li>Timely</li>
-        <li>Complete</li>
-        <li>Understandable</li>
-        <li>Verifiable</li>
+        <li><strong>Data Storage:</strong> Efficiently stores large volumes of data.</li>
+        <li><strong>Data Retrieval:</strong> Quick access to specific information using queries.</li>
+        <li><strong>Data Consistency:</strong> Reduces redundancy and improves accuracy.</li>
+        <li><strong>Multi-user Access:</strong> Allows multiple users to work with the data simultaneously.</li>
+        <li><strong>Security:</strong> Restricts access and protects sensitive information.</li>
+        <li><strong>Backup & Recovery:</strong> Helps protect against data loss.</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="purpose">
-      <h2>Database and Its Purpose</h2>
-      <p>A database is a systematic collection of data. Databases support storage and manipulation of data. Databases make data management easy.</p>
-    </section>
 
     <section id="terms">
       <h2>Terminologies in Database</h2>
