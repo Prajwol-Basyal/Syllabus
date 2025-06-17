@@ -1,35 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="indexstyle.css">
-    <title>Computer Content</title>
-    <style>
-        .container {
-            margin-left: 660px; /* Push the container to the right of the sidebar */
-            margin-top: 120px; /* Adjust top margin for spacing */
-            flex-grow: 1; /* Allow the container to take up available space */
-            text-align: center; /* Center the text inside the container */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Syllabus Guide</title>
+  <style>
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f1faee;
+      color: #1d3557;
+    }
+
+    /* Sidebar navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 260px;
+      background-color: #457b9d;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      color: #f1faee;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      user-select: none;
+    }
+
+    nav a {
+      color: #f1faee;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      display: block;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: #1d3557;
+    }
+
+    /* Main container */
+    .container {
+      margin-left: 260px; /* Same width as nav */
+      padding: 3rem 2rem;
+      flex-grow: 1;
+      max-width: 900px;
+    }
+
+    .container h1 {
+      font-size: 2.4rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #1d3557;
+    }
+
+    /* Table styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #a8dadc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background-color: #1d3557;
+      color: #f1faee;
+      padding: 1rem;
+      font-size: 1.4rem;
+      text-align: left;
+    }
+
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #457b9d;
+      font-size: 1.1rem;
+      color: #1d3557;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: space-around;
+      }
+      nav h1 {
+        display: none;
+      }
+      .container {
+        margin-left: 0;
+        padding: 1rem;
+      }
+      table {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <h1>Menu</h1>
-        <a href="index.html">Home</a>
-        <a href="DbMS.html">Data Management system</a>
-    </nav>
-    <div class="container">
-        <h1>Computer Syllabus Guide</h1>
-        <table>
-            <tr><th>Class 12</th></tr>
-            <tr><td>1. Data Management system</td></tr>
-            <tr><td>2. Data Communication and networking</td></tr>
-            <tr><td>3. Web Tech - II</td></tr>
-            <tr><td>4. C Programming - II</td></tr>
-            <tr><td>5. Object Oriented Programming</td></tr>
-            <tr><td>6. Software Development Life Cycle</td></tr>
-            <tr><td>7. Recent Trends in technology</td></tr>
-        </table>
-    </div>
+  <nav>
+    <h1>Menu</h1>
+    <a href="index.html">Home</a>
+    <a href="DbMS.html">Data Management System</a>
+  </nav>
+
+  <main class="container">
+    <h1>Computer Syllabus Guide</h1>
+    <table>
+      <thead>
+        <tr><th>Class 12</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Data Management System</td></tr>
+        <tr><td>2. Data Communication and Networking</td></tr>
+        <tr><td>3. Web Tech - II</td></tr>
+        <tr><td>4. C Programming - II</td></tr>
+        <tr><td>5. Object Oriented Programming</td></tr>
+        <tr><td>6. Software Development Life Cycle</td></tr>
+        <tr><td>7. Recent Trends in Technology</td></tr>
+      </tbody>
+    </table>
+  </main>
 </body>
 </html>
