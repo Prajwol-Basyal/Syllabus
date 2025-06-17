@@ -335,5 +335,20 @@
       </ul>
     </section>
   </main>
+  <script>
+  const accButtons = document.querySelectorAll(".accordion-button");
+  accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const content = btn.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
