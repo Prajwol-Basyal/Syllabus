@@ -1,215 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Database Management System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 30px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #003366;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1em 0;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-        th {
-            background-color: #e0e0e0;
-        }
-        code {
-            background-color: #efefef;
-            padding: 2px 4px;
-            font-size: 90%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Database Management System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      background: #f0f4f8;
+      color: #222;
+    }
+    nav {
+      width: 220px;
+      position: fixed;
+      height: 100vh;
+      background: #2b2d42;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    nav h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    nav a {
+      display: block;
+      color: #d6e4f0;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    main {
+      margin-left: 240px;
+      padding: 30px;
+      max-width: 900px;
+    }
+    section {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+    h1 {
+      color: #1d3557;
+    }
+    h2 {
+      color: #457b9d;
+      border-left: 4px solid #457b9d;
+      padding-left: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #a8dadc;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media screen and (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      main {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Database Management System</h1>
+  <nav>
+    <h2>Topics</h2>
+    <a href="#data">Data & Info</a>
+    <a href="#features">Features of Info</a>
+    <a href="#purpose">Purpose of DB</a>
+    <a href="#terms">DB Terminology</a>
+    <a href="#dictionary">Data Dictionary</a>
+    <a href="#dbms">DBMS</a>
+    <a href="#models">DB Models</a>
+    <a href="#integrity">Integrity Rules</a>
+    <a href="#normalization">Normalization</a>
+    <a href="#centralized">Central vs Distributed</a>
+    <a href="#security">DB Security</a>
+  </nav>
 
-    <h2>Data</h2>
-    <p>Data refers to raw facts and figures that by themselves may not carry any specific meaning. It could be numbers, characters, symbols, or even audio and video.</p>
+  <main>
+    <section id="data">
+      <h1>Database Management System</h1>
+      <h2>Data</h2>
+      <p>Data refers to raw, unorganized facts that need to be processed. It can be something simple and seemingly random or useless until it is organized.</p>
 
-    <h2>Information</h2>
-    <p>Information is processed data that has meaning and is useful for decision-making. When data is put into context or organized in a meaningful way, it becomes information.</p>
+      <h2>Information</h2>
+      <p>Information is data that has been processed in such a way as to be meaningful to the person who receives it. It is data made useful.</p>
+    </section>
 
-    <h2>Features of Information</h2>
-    <ul>
-        <li><strong>Accurate</strong></li>
-        <li><strong>Relevant</strong></li>
-        <li><strong>Timely</strong></li>
-        <li><strong>Complete</strong></li>
-        <li><strong>Understandable</strong></li>
-        <li><strong>Verifiable</strong></li>
-    </ul>
+    <section id="features">
+      <h2>Features of Information</h2>
+      <ul>
+        <li>Accurate</li>
+        <li>Relevant</li>
+        <li>Timely</li>
+        <li>Complete</li>
+        <li>Understandable</li>
+        <li>Verifiable</li>
+      </ul>
+    </section>
 
-    <h2>Database and Its Purpose</h2>
-    <p>A database is an organized collection of structured data, typically stored electronically. It enables users to store, retrieve, and manipulate data efficiently.</p>
+    <section id="purpose">
+      <h2>Database and Its Purpose</h2>
+      <p>A database is a systematic collection of data. Databases support storage and manipulation of data. Databases make data management easy.</p>
+    </section>
 
-    <h2>Terminologies in Database</h2>
-    <ul>
-        <li><strong>Table</strong>: Collection of related data in rows and columns.</li>
-        <li><strong>Field</strong>: Column representing a data attribute.</li>
-        <li><strong>Record/Tuple</strong>: A row representing a data entry.</li>
-        <li><strong>Object</strong>: Data + methods (object-oriented).</li>
-        <li><strong>Key</strong>: Uniquely identifies a record.</li>
-    </ul>
+    <section id="terms">
+      <h2>Terminologies in Database</h2>
+      <ul>
+        <li><strong>Table:</strong> Collection of data in rows and columns.</li>
+        <li><strong>Field:</strong> A column in a table.</li>
+        <li><strong>Record/Tuple:</strong> A single row.</li>
+        <li><strong>Object:</strong> Instance of a class containing both data and methods.</li>
+        <li><strong>Key:</strong> Used to identify records uniquely.</li>
+      </ul>
+    </section>
 
-    <h2>Data Dictionary</h2>
-    <p>A data dictionary stores definitions and descriptions of data elements. It helps maintain integrity and consistency in a database.</p>
+    <section id="dictionary">
+      <h2>Data Dictionary</h2>
+      <p>A data dictionary is a centralized repository of information about data such as meaning, relationships to other data, origin, usage, and format.</p>
+    </section>
 
-    <h2>Database Management System</h2>
-    <h3>Introduction</h3>
-    <p>A DBMS is software that manages databases and provides an interface to interact with the data.</p>
+    <section id="dbms">
+      <h2>Database Management System</h2>
+      <p>DBMS is software that allows users to define, create, maintain, and control access to the database.</p>
 
-    <h3>Objectives</h3>
-    <ul>
-        <li>Efficient data access</li>
-        <li>Ensure data integrity and security</li>
-        <li>Support multiple users</li>
-    </ul>
+      <h3>Objectives</h3>
+      <ul>
+        <li>Efficient data management</li>
+        <li>Integrity and security</li>
+        <li>Concurrency and recovery</li>
+      </ul>
 
-    <h3>Advantages</h3>
-    <ul>
-        <li>Better data sharing and security</li>
-        <li>Reduced redundancy</li>
-        <li>Backup and recovery support</li>
-    </ul>
+      <h3>Advantages</h3>
+      <ul>
+        <li>Reduces redundancy</li>
+        <li>Improves data sharing</li>
+        <li>Enables backup and recovery</li>
+      </ul>
 
-    <h3>Disadvantages</h3>
-    <ul>
-        <li>Complex and costly setup</li>
-        <li>Needs skilled personnel</li>
-    </ul>
+      <h3>Disadvantages</h3>
+      <ul>
+        <li>High cost</li>
+        <li>Complexity</li>
+        <li>Need for trained staff</li>
+      </ul>
+    </section>
 
-    <h2>Types of Database Model</h2>
-    <ul>
-        <li><strong>Hierarchical</strong>: Tree structure with single-parent records.</li>
-        <li><strong>Network</strong>: Many-to-many relationships via links.</li>
-        <li><strong>Relational</strong>: Tabular format with SQL.</li>
-        <li><strong>Entity-Relational</strong>: Conceptual model using entities and relations.</li>
-    </ul>
-
-    <h2>Integrity Constraints and Types</h2>
-    <ul>
-        <li><strong>Domain</strong>: Value restrictions per field.</li>
-        <li><strong>Entity</strong>: Primary key must be unique and not null.</li>
-        <li><strong>Referential</strong>: Foreign key must match primary key.</li>
-        <li><strong>Keys</strong>: Primary, Foreign, Candidate, Composite.</li>
-    </ul>
-
-    <h2>Normalization</h2>
-    <h3>Introduction</h3>
-    <p>Normalization reduces redundancy and improves data structure.</p>
-
-    <h3>Normal Forms</h3>
-    <ul>
-        <li><strong>1NF</strong>: Atomic fields</li>
-        <li><strong>2NF</strong>: No partial dependencies</li>
-        <li><strong>3NF</strong>: No transitive dependencies</li>
-    </ul>
-
-    <h3>Advantages</h3>
-    <ul>
-        <li>Less redundancy</li>
-        <li>Better consistency</li>
-    </ul>
-
-    <h3>Disadvantages</h3>
-    <ul>
-        <li>Complex queries due to joins</li>
-    </ul>
-
-    <h2>Centralized and Distributed Database</h2>
-    <h3>Introduction</h3>
-    <p>Centralized DB is stored in one place; distributed DB is spread across networks.</p>
-
-    <h3>Advantages of Centralized</h3>
-    <ul>
-        <li>Easy to manage</li>
-        <li>Better control</li>
-    </ul>
-
-    <h3>Disadvantages of Centralized</h3>
-    <ul>
-        <li>Single point of failure</li>
-    </ul>
-
-    <h3>Advantages of Distributed</h3>
-    <ul>
-        <li>Faster access</li>
-        <li>More reliable</li>
-    </ul>
-
-    <h3>Disadvantages of Distributed</h3>
-    <ul>
-        <li>Complex setup</li>
-    </ul>
-
-    <h3>Comparison Table</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th>Centralized</th>
-                <th>Distributed</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Speed</td>
-                <td>Slower</td>
-                <td>Faster</td>
-            </tr>
-            <tr>
-                <td>Failure Impact</td>
-                <td>High</td>
-                <td>Low</td>
-            </tr>
-            <tr>
-                <td>Maintenance</td>
-                <td>Simple</td>
-                <td>Complex</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Database Security</h2>
-    <h3>Introduction</h3>
-    <p>Database security protects information from unauthorized access, loss, or corruption.</p>
-
-    <h3>Challenges</h3>
-    <ul>
-        <li>Hacking</li>
-        <li>Insider misuse</li>
-        <li>Lack of encryption</li>
-    </ul>
-
-    <h3>Security Measures</h3>
-    <ul>
-        <li>User authentication</li>
-        <li>Access controls</li>
-        <li>Data encryption</li>
-        <li>Firewalls</li>
-        <li>Regular backups</li>
-    </ul>
-
-    <h3>Roles of DBA</h3>
-    <ul>
-        <li>Database setup</li>
-        <li>Monitoring performance</li>
-        <li>Managing users and roles</li>
-        <li>Security enforcement</li>
-        <li>Backup and restore</li>
-    </ul>
-</body>
-</html>
+    <section id="models">
+      <h2>Types of Database Model
