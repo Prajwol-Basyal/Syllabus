@@ -1,90 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="indexstyle.css">
-    <title>Computer Content</title>
+    <meta charset="UTF-8">
+    <title>Database Management System</title>
     <style>
-        .container {
-            margin-left: 660px; /* Push the container to the right of the sidebar */
-            margin-top: 120px; /* Adjust top margin for spacing */
-            flex-grow: 1; /* Allow the container to take up available space */
-            text-align: center; /* Center the text inside the container */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #003366;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        code {
+            background-color: #efefef;
+            padding: 2px 4px;
+            font-size: 90%;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <h1>Menu</h1>
-        <a href="index.html">Home</a>
-        <a href="#data">Data & Information</a>
-    </nav>
-    <div class="container"style="margin: auto; width: 80%;">
-        <h1 id="data">Data and Information</h1>
-        <h2>Data</h2>
-        <p>Data are individual units of information. In analytical processes, data are represented by variables.
-         Data is always interpreted, by a human or machine, to derive meaning. So, data is meaningless. Data contains numbers, statements, and characters in a raw form. </p>
-        <h2>Information</h2>
-        <p>Information is the knowledge that is remodeled and classified into an intelligible type, which may be utilized in the method of deciding. In short, once knowledge ends up being purposeful when conversing, it’s referred to as info. It’s one thing that informs, in essence, it provides a solution to a specific question.
-         It may be obtained from numerous sources like newspapers, the internet, television, people, books, etc. </p>
-        <h1 id="features">Features of Information</h1>
-        <ol type="1">
-        <strong>Subjectivity</strong> : <p>Characteristics of information refer to the qualities that define its usefulness.
-                     Subjectivity is one such trait, which denotes the extent to which the information has been influenced by personal opinion or bias.
-                     It is important for users of data and other forms of information to be aware of this aspect so as to ensure their decisions are based on accurate facts rather than interpretations. It is best to use sources of information with minimal subjectivity.</p>
+    <h1>Database Management System</h1>
 
-<strong>Relevance</strong>
-<p>The relevance of information is another important characteristic. It implies that the collected data should be useful and applicable to the purpose for which it is being used. For instance, a student searching for information about a particular topic should have access to data that is related and helpful in furthering their understanding and research.
-Relevance also pertains to the timeliness of the content, meaning how current or updated the information is at any given time. It is important for this to be up to date so that users can trust the accuracy of their sources. </p>
+    <h2>Data</h2>
+    <p>Data refers to raw facts and figures that by themselves may not carry any specific meaning. It could be numbers, characters, symbols, or even audio and video.</p>
 
-<strong>Timeliness</strong>
-<P>
-    Timeliness is an important characteristic of information because it provides evidence about when the data was collected or updated last.
-    This helps users to gauge its accuracy and whether it is applicable to their current needs. Additionally, timely information can be used to make decisions that are informed and in line with the current situation.
-</P>
+    <h2>Information</h2>
+    <p>Information is processed data that has meaning and is useful for decision-making. When data is put into context or organized in a meaningful way, it becomes information.</p>
 
+    <h2>Features of Information</h2>
+    <ul>
+        <li><strong>Accurate</strong></li>
+        <li><strong>Relevant</strong></li>
+        <li><strong>Timely</strong></li>
+        <li><strong>Complete</strong></li>
+        <li><strong>Understandable</strong></li>
+        <li><strong>Verifiable</strong></li>
+    </ul>
 
-<strong>Accuracy</strong>
-<p>
-    The accuracy of information is one of its most important characteristics. This implies that the content should provide correct and reliable data which has been verified by reliable sources.
-    Accuracy also refers to how precise or detailed the information is, as users must have access to enough details for them to carry out their tasks accurately and effectively.
-</p>
+    <h2>Database and Its Purpose</h2>
+    <p>A database is an organized collection of structured data, typically stored electronically. It enables users to store, retrieve, and manipulate data efficiently.</p>
 
-<strong>Correct Information Format</strong>
-<p>
-    Correct information format means ensuring that the data provided is structured in a way that makes it easy for users to access, understand, and utilize it. This involves presenting the data in an organized manner so that it can be read and interpreted quickly without any confusion or ambiguity.
-    
-    Additionally, providing clear labels for the different data points allows users to quickly identify and make sense of the information.
-</p>
+    <h2>Terminologies in Database</h2>
+    <ul>
+        <li><strong>Table</strong>: Collection of related data in rows and columns.</li>
+        <li><strong>Field</strong>: Column representing a data attribute.</li>
+        <li><strong>Record/Tuple</strong>: A row representing a data entry.</li>
+        <li><strong>Object</strong>: Data + methods (object-oriented).</li>
+        <li><strong>Key</strong>: Uniquely identifies a record.</li>
+    </ul>
 
-<strong>Completeness</strong>
-<p>
-    The completeness of the information is another one of its important characteristics. It implies that all necessary details are available so that users can make well-informed decisions.
-    
-    This means providing enough background information on a particular topic, as well as any other relevant pieces of data which may be required.
-</p>
+    <h2>Data Dictionary</h2>
+    <p>A data dictionary stores definitions and descriptions of data elements. It helps maintain integrity and consistency in a database.</p>
 
-<strong>Accessibility</strong>
-<p>
-    One more characteristic of information is accessibility, which refers to how easy it is to get access to the content. This includes making sure it is available online or in physical form and that there are no restrictions that impede users’ ability to use it.
-    
-    Additionally, if there are language barriers or copyright issues, they need to be addressed so that users can access the information with ease.
-</p>
+    <h2>Database Management System</h2>
+    <h3>Introduction</h3>
+    <p>A DBMS is software that manages databases and provides an interface to interact with the data.</p>
 
-<strong>Adequacy</strong>
-<p>
-    Adequacy is also an important characteristic of information, which implies that it should provide enough details for users to achieve their desired goals or outcomes.
-    This means providing adequate data points which cover all aspects and allow users to make informed decisions.
-</p>
+    <h3>Objectives</h3>
+    <ul>
+        <li>Efficient data access</li>
+        <li>Ensure data integrity and security</li>
+        <li>Support multiple users</li>
+    </ul>
 
-<strong>Explicitness</strong>
-<P>
-    Another quality of useful information is explicitness, which denotes how clear and specific the content is. This includes avoiding any ambiguous terms or phrases so as not to leave any room for misinterpretation.
-    Additionally, using appropriate language helps make sure that users understand what is being said without having to put in the extra effort.
-</P>
+    <h3>Advantages</h3>
+    <ul>
+        <li>Better data sharing and security</li>
+        <li>Reduced redundancy</li>
+        <li>Backup and recovery support</li>
+    </ul>
 
-<strong>Impartiality</strong>
-<P>Impartiality is an important factor to consider when assessing information. This means making sure that the content provided is unbiased and does not contain any personal opinions or prejudices.</P>
-<h2 id="database">Database and Its Features</h2>
-<p>A database is an electronically stored, systematic collection of data that can include words, numbers, images, videos, and other types of files. Databases are managed using specialized software called a Database Management System (DBMS), which allows users to store, retrieve, and manipulate data efficiently. Databases are the backbone of modern applications, supporting businesses, organizations, and systems across industries.</p>
-</div>
-    
+    <h3>Disadvantages</h3>
+    <ul>
+        <li>Complex and costly setup</li>
+        <li>Needs skilled personnel</li>
+    </ul>
+
+    <h2>Types of Database Model</h2>
+    <ul>
+        <li><strong>Hierarchical</strong>: Tree structure with single-parent records.</li>
+        <li><strong>Network</strong>: Many-to-many relationships via links.</li>
+        <li><strong>Relational</strong>: Tabular format with SQL.</li>
+        <li><strong>Entity-Relational</strong>: Conceptual model using entities and relations.</li>
+    </ul>
+
+    <h2>Integrity Constraints and Types</h2>
+    <ul>
+        <li><strong>Domain</strong>: Value restrictions per field.</li>
+        <li><strong>Entity</strong>: Primary key must be unique and not null.</li>
+        <li><strong>Referential</strong>: Foreign key must match primary key.</li>
+        <li><strong>Keys</strong>: Primary, Foreign, Candidate, Composite.</li>
+    </ul>
+
+    <h2>Normalization</h2>
+    <h3>Introduction</h3>
+    <p>Normalization reduces redundancy and improves data structure.</p>
+
+    <h3>Normal Forms</h3>
+    <ul>
+        <li><strong>1NF</strong>: Atomic fields</li>
+        <li><strong>2NF</strong>: No partial dependencies</li>
+        <li><strong>3NF</strong>: No transitive dependencies</li>
+    </ul>
+
+    <h3>Advantages</h3>
+    <ul>
+        <li>Less redundancy</li>
+        <li>Better consistency</li>
+    </ul>
+
+    <h3>Disadvantages</h3>
+    <ul>
+        <li>Complex queries due to joins</li>
+    </ul>
+
+    <h2>Centralized and Distributed Database</h2>
+    <h3>Introduction</h3>
+    <p>Centralized DB is stored in one place; distributed DB is spread across networks.</p>
+
+    <h3>Advantages of Centralized</h3>
+    <ul>
+        <li>Easy to manage</li>
+        <li>Better control</li>
+    </ul>
+
+    <h3>Disadvantages of Centralized</h3>
+    <ul>
+        <li>Single point of failure</li>
+    </ul>
+
+    <h3>Advantages of Distributed</h3>
+    <ul>
+        <li>Faster access</li>
+        <li>More reliable</li>
+    </ul>
+
+    <h3>Disadvantages of Distributed</h3>
+    <ul>
+        <li>Complex setup</li>
+    </ul>
+
+    <h3>Comparison Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Centralized</th>
+                <th>Distributed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Speed</td>
+                <td>Slower</td>
+                <td>Faster</td>
+            </tr>
+            <tr>
+                <td>Failure Impact</td>
+                <td>High</td>
+                <td>Low</td>
+            </tr>
+            <tr>
+                <td>Maintenance</td>
+                <td>Simple</td>
+                <td>Complex</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Database Security</h2>
+    <h3>Introduction</h3>
+    <p>Database security protects information from unauthorized access, loss, or corruption.</p>
+
+    <h3>Challenges</h3>
+    <ul>
+        <li>Hacking</li>
+        <li>Insider misuse</li>
+        <li>Lack of encryption</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <ul>
+        <li>User authentication</li>
+        <li>Access controls</li>
+        <li>Data encryption</li>
+        <li>Firewalls</li>
+        <li>Regular backups</li>
+    </ul>
+
+    <h3>Roles of DBA</h3>
+    <ul>
+        <li>Database setup</li>
+        <li>Monitoring performance</li>
+        <li>Managing users and roles</li>
+        <li>Security enforcement</li>
+        <li>Backup and restore</li>
+    </ul>
+</body>
+</html>
