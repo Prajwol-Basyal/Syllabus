@@ -335,49 +335,6 @@
 <section id="past-year-qa" style="padding: 20px; font-family: Arial, sans-serif;">
   <h2>Past Year Questions & Answers (2020–2024)</h2>
 
-  <div class="qa-block">
-    <h3>1. What is Database and DBMS? List out the advantages and disadvantages of DBMS.</h3>
-    <p><strong>Database:</strong> A collection of related data organized in a structured format.</p>
-    <p><strong>DBMS:</strong> A software system that allows users to define, create, maintain, and control access to databases.</p>
-    <p><strong>Advantages:</strong> Reduces data redundancy, improves data integrity, enables data sharing, enhances security, allows backup and recovery.</p>
-    <p><strong>Disadvantages:</strong> Complex system, high cost, performance can degrade with large databases.</p>
-  </div>
-
-  <div class="qa-block">
-    <h3>2. Differentiate between file processing system and DBMS.</h3>
-    <ul>
-      <li>Redundancy: High in file systems, minimized in DBMS.</li>
-      <li>Data Sharing: Limited in file systems, extensive in DBMS.</li>
-      <li>Security: Weak in file systems, strong in DBMS.</li>
-      <li>Backup & Recovery: Manual in file systems, automated in DBMS.</li>
-    </ul>
-  </div>
-
-  <div class="qa-block">
-    <h3>3. Explain the different models of DBMS with advantages and disadvantages.</h3>
-    <p><strong>Hierarchical Model:</strong> Tree structure, fast access. <em>Disadvantage:</em> Rigid structure.</p>
-    <p><strong>Network Model:</strong> Complex relationships using graphs. <em>Disadvantage:</em> Complex implementation.</p>
-    <p><strong>Relational Model:</strong> Uses tables, flexible and easy to use. <em>Disadvantage:</em> Slower for complex queries.</p>
-  </div>
-
-  <div class="qa-block">
-    <h3>4. What is a relational database? How is it different from other models?</h3>
-    <p>A relational database stores data in tables (relations) with rows and columns. It differs from hierarchical and network models by being more flexible, easier to query using SQL, and supporting ad-hoc queries.</p>
-  </div>
-
-  <div class="qa-block">
-    <h3>5. What is data redundancy? How does DBMS help in reducing it?</h3>
-    <p>Data redundancy means storing the same data in multiple places. DBMS reduces it by centralizing data and using normalization techniques.</p>
-  </div>
-
-  <!-- You can continue in this style for Q6 to Q12 -->
-</section>
-<!-- ===================== -->
-<!-- Past Year Q/A Section -->
-<!-- ===================== -->
-<section id="past-year-qa" style="padding: 20px; font-family: Arial, sans-serif;">
-  <h2>Past Year Questions & Answers (2020–2024)</h2>
-
 <section id="past-year-qa" class="container my-5">
   <h2 class="mb-4">Past Year Questions & Answers (2020–2024)</h2>
 
@@ -389,6 +346,7 @@
       <p><strong>Advantages:</strong> Reduces redundancy, enhances security, ensures data integrity, supports sharing and backup.</p>
       <p><strong>Disadvantages:</strong> High cost, complex system, large overhead.</p>
     </div>
+    <br>
 
     <button class="accordion-button">2. Differentiate between file processing system and DBMS.</button>
     <div class="accordion-content">
@@ -399,6 +357,7 @@
         <li>Backup: Manual in file systems, automated in DBMS.</li>
       </ul>
     </div>
+     <br> 
 
     <button class="accordion-button">3. Explain the different models of DBMS with advantages and disadvantages.</button>
     <div class="accordion-content">
@@ -406,17 +365,17 @@
       <p><strong>Network Model:</strong> Graph-based; allows many-to-many relationships. <em>Disadvantage:</em> Complex design.</p>
       <p><strong>Relational Model:</strong> Table-based; easy to use. <em>Disadvantage:</em> May slow down with large joins.</p>
     </div>
-
+<br>
     <button class="accordion-button">4. What is a relational database? How is it different from other database models?</button>
     <div class="accordion-content">
       <p>A relational database stores data in tables (relations). It supports SQL and allows flexible queries unlike hierarchical or network models.</p>
     </div>
-
+<br>
     <button class="accordion-button">5. What is data redundancy? How does DBMS help in reducing it?</button>
     <div class="accordion-content">
       <p>Data redundancy is the unnecessary duplication of data. DBMS reduces it through normalization and centralized management.</p>
     </div>
-
+<br>
     <button class="accordion-button">6. Write difference between centralized and distributed database systems.</button>
     <div class="accordion-content">
       <ul>
@@ -426,12 +385,12 @@
         <li>Distributed: Fault-tolerant, faster access for local users.</li>
       </ul>
     </div>
-
+<br>
     <button class="accordion-button">7. Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</button>
     <div class="accordion-content">
       <p>A DBA manages the database environment including installation, configuration, maintenance, performance tuning, backup, and access control.</p>
     </div>
-
+<br>
     <button class="accordion-button">8. Define normalization. Explain 1NF, 2NF and 3NF with suitable examples.</button>
     <div class="accordion-content">
       <p><strong>Normalization:</strong> Process of organizing data to reduce redundancy and improve integrity.</p>
@@ -439,7 +398,7 @@
       <p><strong>2NF:</strong> In 1NF + no partial dependency on primary key.</p>
       <p><strong>3NF:</strong> In 2NF + no transitive dependency.</p>
     </div>
-
+<br>
     <button class="accordion-button">9. Explain the terms: primary key, foreign key, and candidate key with examples.</button>
     <div class="accordion-content">
       <ul>
@@ -448,7 +407,7 @@
         <li><strong>Candidate Key:</strong> Any field that can be a primary key. e.g., Email, RollNo</li>
       </ul>
     </div>
-
+<br>
     <button class="accordion-button">10. What is SQL? Explain its components and common functions.</button>
     <div class="accordion-content">
       <p>SQL (Structured Query Language) is used to manage data in relational databases. Components include:</p>
@@ -460,7 +419,7 @@
       </ul>
       <p>Common functions: COUNT, SUM, AVG, MIN, MAX</p>
     </div>
-
+<br>
     <button class="accordion-button">11. Write SQL commands to perform operations.</button>
     <div class="accordion-content">
       <pre><code>CREATE TABLE students (
@@ -482,7 +441,7 @@ UPDATE students SET Marks = 85 WHERE Name = 'Anita';
 DELETE FROM students WHERE Id = 3;
       </code></pre>
     </div>
-
+<br>
     <button class="accordion-button">12. Define the following terms.</button>
     <div class="accordion-content">
       <ul>
@@ -497,7 +456,7 @@ DELETE FROM students WHERE Id = 3;
         <li><strong>Database System:</strong> Combination of DBMS, data, and tools.</li>
       </ul>
     </div>
-
+<br>
   </div>
 </section>
 
