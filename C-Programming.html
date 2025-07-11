@@ -142,12 +142,23 @@
 
     <section id="storage">
       <h2>Storage Classes</h2>
-      <ul>
-        <li><strong>Automatic (auto):</strong> Default for local variables, exists within function scope.</li>
-        <li><strong>External (extern):</strong> Declared outside functions, used globally.</li>
-        <li><strong>Register:</strong> Stored in CPU registers for fast access, if possible.</li>
-        <li><strong>Static:</strong> Retains its value between function calls, scope is limited.</li>
-      </ul>
+  <ul>
+    <li>
+      <strong>Automatic (<code>auto</code>):</strong> This is the default storage class for local variables declared inside a function. The variable is created when the function is called and destroyed when the function exits. It cannot be accessed outside the function.
+    </li>
+    <li>
+      <strong>External (<code>extern</code>):</strong> Used to declare a global variable or function that is defined in another file or location. It allows variables to be shared across multiple files in a large program.
+      <br><em>Example:</em> You define a variable in one file and use <code>extern</code> to access it in another.
+    </li>
+    <li>
+      <strong>Register (<code>register</code>):</strong> Suggests to the compiler to store the variable in a CPU register instead of RAM for faster access. It is mainly used for loop counters or performance-critical variables. However, actual usage depends on the compiler.
+      <br><em>Note:</em> You cannot get the address of a register variable using <code>&</code>.
+    </li>
+    <li>
+      <strong>Static (<code>static</code>):</strong> Keeps the variable in memory even after the function exits. It preserves its last value across multiple calls to the function. Useful when you want a function to remember a value between calls.
+      <br><em>Example:</em> A counter that keeps track of how many times a function has been called.
+    </li>
+  </ul>
     </section>
 
     <section id="recursion">
