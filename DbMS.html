@@ -172,11 +172,6 @@
 </section>
 <section id="purpose">
   <h2>Database and Its Purpose</h2>
-  <div class="accordion">
-    <button class="accordion-button">What is a Database?</button>
-    <div class="accordion-content">
-      <p>A database is an organized collection of related data that is stored and accessed electronically. Instead of relying on scattered files, databases allow for structured storage using tables, indexes, and keys. This structured approach supports fast access, easy manipulation, and efficient management of large volumes of information.</p>
-    </div>
 
     <button class="accordion-button">Why Use a Database?</button>
     <div class="accordion-content">
@@ -383,127 +378,129 @@
 <section id="past-year-qa" style="padding: 20px; font-family: Arial, sans-serif;">
   <h2>Past Year Questions & Answers (2020–2024)</h2>
 
-  <div class="qa-block">
-    <h3>1. What is Database and DBMS? List out the advantages and disadvantages of DBMS.</h3>
-    <p><strong>Database:</strong> A collection of related data organized in a structured format.</p>
-    <p><strong>DBMS:</strong> A software system to define, store, retrieve and manage data efficiently.</p>
-    <p><strong>Advantages:</strong> Minimizes redundancy, ensures data integrity, allows data sharing, secures access, and supports backup and recovery.</p>
-    <p><strong>Disadvantages:</strong> Complex to use, high initial cost, large system overhead, risk of data loss during failure.</p>
-  </div>
+<section id="past-year-qa" class="container my-5">
+  <h2 class="mb-4">Past Year Questions & Answers (2020–2024)</h2>
 
-  <div class="qa-block">
-    <h3>2. Differentiate between file processing system and DBMS.</h3>
-    <ul>
-      <li><strong>Redundancy:</strong> High in file systems, minimized in DBMS.</li>
-      <li><strong>Data Integrity:</strong> Difficult in file systems, enforced in DBMS.</li>
-      <li><strong>Security:</strong> Weak in file systems, robust in DBMS.</li>
-      <li><strong>Backup:</strong> Manual in file systems, automated in DBMS.</li>
-    </ul>
-  </div>
+  <div class="accordion">
+    <button class="accordion-button">1. What is Database and DBMS? List out the advantages and disadvantages of DBMS.</button>
+    <div class="accordion-content">
+      <p><strong>Database:</strong> A collection of related data organized in a structured format.</p>
+      <p><strong>DBMS:</strong> Software that allows users to store, retrieve, and manage data efficiently.</p>
+      <p><strong>Advantages:</strong> Reduces redundancy, enhances security, ensures data integrity, supports sharing and backup.</p>
+      <p><strong>Disadvantages:</strong> High cost, complex system, large overhead.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>3. Explain the different models of DBMS with advantages and disadvantages.</h3>
-    <p><strong>Hierarchical Model:</strong> Tree-like structure, fast retrieval. <em>Disadvantage:</em> Rigid structure.</p>
-    <p><strong>Network Model:</strong> Graph structure, complex relationships. <em>Disadvantage:</em> Complex design.</p>
-    <p><strong>Relational Model:</strong> Table-based, easy to use and query. <em>Disadvantage:</em> Performance may reduce with complex joins.</p>
-  </div>
+    <button class="accordion-button">2. Differentiate between file processing system and DBMS.</button>
+    <div class="accordion-content">
+      <ul>
+        <li>Redundancy: High in file systems, low in DBMS.</li>
+        <li>Data Sharing: Difficult in file systems, easy in DBMS.</li>
+        <li>Security: Weak in file systems, strong in DBMS.</li>
+        <li>Backup: Manual in file systems, automated in DBMS.</li>
+      </ul>
+    </div>
 
-  <div class="qa-block">
-    <h3>4. What is a relational database? How is it different from other database models?</h3>
-    <p>A relational database stores data in tables. It supports SQL and is more flexible than hierarchical or network models, allowing ad-hoc queries and easier maintenance.</p>
-  </div>
+    <button class="accordion-button">3. Explain the different models of DBMS with advantages and disadvantages.</button>
+    <div class="accordion-content">
+      <p><strong>Hierarchical Model:</strong> Tree structure; fast access. <em>Disadvantage:</em> Rigid structure.</p>
+      <p><strong>Network Model:</strong> Graph-based; allows many-to-many relationships. <em>Disadvantage:</em> Complex design.</p>
+      <p><strong>Relational Model:</strong> Table-based; easy to use. <em>Disadvantage:</em> May slow down with large joins.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>5. What is data redundancy? How does DBMS help in reducing it?</h3>
-    <p>Data redundancy is the unnecessary duplication of data. DBMS minimizes redundancy through normalization and central control over data.</p>
-  </div>
+    <button class="accordion-button">4. What is a relational database? How is it different from other database models?</button>
+    <div class="accordion-content">
+      <p>A relational database stores data in tables (relations). It supports SQL and allows flexible queries unlike hierarchical or network models.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>6. Write difference between centralized and distributed database systems.</h3>
-    <ul>
-      <li><strong>Centralized:</strong> Data stored at a single location.</li>
-      <li><strong>Distributed:</strong> Data spread across multiple sites.</li>
-      <li><strong>Speed:</strong> Centralized can be slower; distributed offers local speed.</li>
-      <li><strong>Failure:</strong> Centralized has single point of failure; distributed is fault-tolerant.</li>
-    </ul>
-  </div>
+    <button class="accordion-button">5. What is data redundancy? How does DBMS help in reducing it?</button>
+    <div class="accordion-content">
+      <p>Data redundancy is the unnecessary duplication of data. DBMS reduces it through normalization and centralized management.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>7. Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</h3>
-    <p>A DBA is responsible for managing, maintaining, and securing databases. Responsibilities include installation, configuration, backup, recovery, tuning performance, and user access control.</p>
-  </div>
+    <button class="accordion-button">6. Write difference between centralized and distributed database systems.</button>
+    <div class="accordion-content">
+      <ul>
+        <li>Centralized: Data is stored in one location.</li>
+        <li>Distributed: Data is spread across multiple locations.</li>
+        <li>Centralized: Easier to manage but prone to single point failure.</li>
+        <li>Distributed: Fault-tolerant, faster access for local users.</li>
+      </ul>
+    </div>
 
-  <div class="qa-block">
-    <h3>8. Define normalization. Explain 1NF, 2NF and 3NF with suitable examples.</h3>
-    <p><strong>Normalization:</strong> Process of organizing data to reduce redundancy.</p>
-    <p><strong>1NF:</strong> Eliminate repeating groups; each cell contains atomic values.</p>
-    <p><strong>2NF:</strong> Must be in 1NF and all non-key attributes depend on the whole primary key.</p>
-    <p><strong>3NF:</strong> Must be in 2NF and no transitive dependencies.</p>
-  </div>
+    <button class="accordion-button">7. Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</button>
+    <div class="accordion-content">
+      <p>A DBA manages the database environment including installation, configuration, maintenance, performance tuning, backup, and access control.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>9. Explain the terms: primary key, foreign key, and candidate key with examples.</h3>
-    <ul>
-      <li><strong>Primary Key:</strong> Uniquely identifies a record. Example: StudentID.</li>
-      <li><strong>Foreign Key:</strong> A key that references the primary key of another table. Example: DeptID in Student table.</li>
-      <li><strong>Candidate Key:</strong> A field that can qualify as a primary key. Example: Email, StudentID.</li>
-    </ul>
-  </div>
+    <button class="accordion-button">8. Define normalization. Explain 1NF, 2NF and 3NF with suitable examples.</button>
+    <div class="accordion-content">
+      <p><strong>Normalization:</strong> Process of organizing data to reduce redundancy and improve integrity.</p>
+      <p><strong>1NF:</strong> Atomic values; no repeating groups.</p>
+      <p><strong>2NF:</strong> In 1NF + no partial dependency on primary key.</p>
+      <p><strong>3NF:</strong> In 2NF + no transitive dependency.</p>
+    </div>
 
-  <div class="qa-block">
-    <h3>10. What is SQL? Explain its components and common functions.</h3>
-    <p>SQL (Structured Query Language) is used to interact with relational databases.</p>
-    <p><strong>Components:</strong> DDL (CREATE, DROP), DML (INSERT, UPDATE, DELETE), DCL (GRANT, REVOKE), TCL (COMMIT, ROLLBACK).</p>
-    <p><strong>Common Functions:</strong> COUNT, SUM, AVG, MIN, MAX, GROUP BY, ORDER BY.</p>
-  </div>
+    <button class="accordion-button">9. Explain the terms: primary key, foreign key, and candidate key with examples.</button>
+    <div class="accordion-content">
+      <ul>
+        <li><strong>Primary Key:</strong> Unique identifier. e.g., StudentID</li>
+        <li><strong>Foreign Key:</strong> Refers to primary key of another table. e.g., DeptID</li>
+        <li><strong>Candidate Key:</strong> Any field that can be a primary key. e.g., Email, RollNo</li>
+      </ul>
+    </div>
 
-  <div class="qa-block">
-    <h3>11. Write SQL commands to perform the following operations:</h3>
-    <pre><code>
--- a. Create a table
-CREATE TABLE students (
+    <button class="accordion-button">10. What is SQL? Explain its components and common functions.</button>
+    <div class="accordion-content">
+      <p>SQL (Structured Query Language) is used to manage data in relational databases. Components include:</p>
+      <ul>
+        <li>DDL: CREATE, DROP</li>
+        <li>DML: INSERT, UPDATE, DELETE</li>
+        <li>DCL: GRANT, REVOKE</li>
+        <li>TCL: COMMIT, ROLLBACK</li>
+      </ul>
+      <p>Common functions: COUNT, SUM, AVG, MIN, MAX</p>
+    </div>
+
+    <button class="accordion-button">11. Write SQL commands to perform operations.</button>
+    <div class="accordion-content">
+      <pre><code>CREATE TABLE students (
   Id INT PRIMARY KEY,
   Name VARCHAR(50),
   Class VARCHAR(10),
   Marks INT
 );
 
--- b. Insert records
-INSERT INTO students (Id, Name, Class, Marks)
-VALUES
-  (1, 'Anita', '10', 78),
-  (2, 'Ravi', '10', 82),
-  (3, 'Mina', '9', 91);
+INSERT INTO students (Id, Name, Class, Marks) VALUES
+(1, 'Anita', '10', 78),
+(2, 'Ravi', '10', 82),
+(3, 'Mina', '9', 91);
 
--- c. Display all records
 SELECT * FROM students;
 
--- d. Update marks of Anita
-UPDATE students
-SET Marks = 85
-WHERE Name = 'Anita';
+UPDATE students SET Marks = 85 WHERE Name = 'Anita';
 
--- e. Delete record with id = 3
-DELETE FROM students
-WHERE Id = 3;
-    </code></pre>
-  </div>
+DELETE FROM students WHERE Id = 3;
+      </code></pre>
+    </div>
 
-  <div class="qa-block">
-    <h3>12. Define the following terms:</h3>
-    <ul>
-      <li><strong>Data Dictionary:</strong> Metadata that stores structure of database.</li>
-      <li><strong>Primary Key:</strong> Unique identifier for table records.</li>
-      <li><strong>Relationship:</strong> Link between tables via keys.</li>
-      <li><strong>DML:</strong> Commands to manipulate data (INSERT, UPDATE, DELETE).</li>
-      <li><strong>SQL:</strong> Language to manage relational databases.</li>
-      <li><strong>Data Integrity:</strong> Accuracy and consistency of data.</li>
-      <li><strong>DDL:</strong> Commands to define database schema (CREATE, ALTER).</li>
-      <li><strong>Data Security:</strong> Protecting data from unauthorized access.</li>
-      <li><strong>Database System:</strong> DBMS + database + users + application programs.</li>
-    </ul>
+    <button class="accordion-button">12. Define the following terms.</button>
+    <div class="accordion-content">
+      <ul>
+        <li><strong>Data Dictionary:</strong> Metadata about database structure.</li>
+        <li><strong>Primary Key:</strong> Unique field in a table.</li>
+        <li><strong>Relationship:</strong> Logical connection between tables.</li>
+        <li><strong>DML:</strong> Data Manipulation Language.</li>
+        <li><strong>SQL:</strong> Language to interact with databases.</li>
+        <li><strong>Data Integrity:</strong> Accuracy and consistency of data.</li>
+        <li><strong>DDL:</strong> Data Definition Language.</li>
+        <li><strong>Data Security:</strong> Protection from unauthorized access.</li>
+        <li><strong>Database System:</strong> Combination of DBMS, data, and tools.</li>
+      </ul>
+    </div>
+
   </div>
 </section>
+
   </main>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
