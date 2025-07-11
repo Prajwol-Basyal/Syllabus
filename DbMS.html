@@ -385,12 +385,48 @@
 
     <button class="accordion-button">2. Differentiate between file processing system and DBMS.</button>
     <div class="accordion-content">
-      <ul>
-        <li>Redundancy: High in file systems, low in DBMS.</li>
-        <li>Data Sharing: Difficult in file systems, easy in DBMS.</li>
-        <li>Security: Weak in file systems, strong in DBMS.</li>
-        <li>Backup: Manual in file systems, automated in DBMS.</li>
-      </ul>
+  <h3>Comparison Table</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>File Processing System</th>
+        <th>DBMS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Data Redundancy</strong></td>
+        <td>Same data may be stored in multiple files, leading to duplication.</td>
+        <td>Centralized control reduces duplication and storage waste.</td>
+      </tr>
+      <tr>
+        <td><strong>Data Consistency</strong></td>
+        <td>Inconsistent data possible due to redundancy across files.</td>
+        <td>Data remains consistent with centralized updates.</td>
+      </tr>
+      <tr>
+        <td><strong>Security</strong></td>
+        <td>Basic file-level access control; vulnerable to unauthorized access.</td>
+        <td>Advanced security with user roles, permissions, and encryption.</td>
+      </tr>
+      <tr>
+        <td><strong>Data Access</strong></td>
+        <td>Programmer must manually handle file logic for access.</td>
+        <td>SQL makes data querying and manipulation easy and standardized.</td>
+      </tr>
+      <tr>
+        <td><strong>Multi-user Access</strong></td>
+        <td>Challenging to support; risk of conflicts or corruption.</td>
+        <td>Designed to handle multiple users with proper concurrency control.</td>
+      </tr>
+      <tr>
+        <td><strong>Backup & Recovery</strong></td>
+        <td>Manual process; prone to errors or data loss.</td>
+        <td>Built-in tools for automatic backup and recovery.</td>
+      </tr>
+    </tbody>
+  </table>
     </div>
      <br> 
 
