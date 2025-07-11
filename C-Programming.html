@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C Programming</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      background: #f0f4f8;
+      color: #222;
+    }
+    nav {
+      width: 220px;
+      position: fixed;
+      height: 100vh;
+      background: #1e3a8a;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    nav h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    nav a {
+      display: block;
+      color: #d6e4f0;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    main {
+      margin-left: 240px;
+      padding: 30px;
+      max-width: 900px;
+    }
+    section {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+    h1 {
+      color: #1e3a8a;
+    }
+    h2 {
+      color: #2563eb;
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @media screen and (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>C Topics</h2>
+    <a href="#function">Functions</a>
+    <a href="#categories">Function Categories</a>
+    <a href="#storage">Storage Classes</a>
+    <a href="#recursion">Recursion</a>
+    <a href="#arrays">Passing Arrays</a>
+  </nav>
+  <main>
+    <section id="function">
+      <h1>C Programming</h1>
+      <h2>Functions</h2>
+      <p>A function is a block of code that performs a specific task. Functions help to break programs into smaller, modular parts, making them easier to manage and reuse. Functions are essential in structured programming.</p>
+      <h3>Syntax of a Function</h3>
+      <pre><code>return_type function_name(parameter_list) {
+  // function body
+}</code></pre>
+      <h3>Types of Functions</h3>
+      <ul>
+        <li><strong>Library Functions:</strong> Predefined in C, such as <code>printf()</code>, <code>scanf()</code>.</li>
+        <li><strong>User-defined Functions:</strong> Created by the programmer to perform specific tasks.</li>
+      </ul>
+      <h3>Components of a Function</h3>
+      <ul>
+        <li><strong>Function Prototype:</strong> Declaration of a function before use.</li>
+        <li><strong>Function Call:</strong> Statement that invokes the function.</li>
+        <li><strong>Function Definition:</strong> Actual body of the function.</li>
+        <li><strong>Return Type:</strong> Specifies what the function returns.</li>
+      </ul>
+    </section>
 
+    <section id="categories">
+      <h2>Function Categories with Examples</h2>
+      <ul>
+        <li><strong>Function with return type but no arguments:</strong><br>
+          <pre><code>int getValue() {
+  return 10;
+}</code></pre>
+        </li>
+        <li><strong>Function with return type and with arguments:</strong><br>
+          <pre><code>int add(int a, int b) {
+  return a + b;
+}</code></pre>
+        </li>
+        <li><strong>Function with no return type and no arguments:</strong><br>
+          <pre><code>void greet() {
+  printf("Hello!\n");
+}</code></pre>
+        </li>
+        <li><strong>Function with no return type but with arguments:</strong><br>
+          <pre><code>void display(int num) {
+  printf("%d", num);
+}</code></pre>
+        </li>
+      </ul>
+    </section>
+
+    <section id="storage">
+      <h2>Storage Classes</h2>
+      <ul>
+        <li><strong>Automatic (auto):</strong> Default for local variables, exists within function scope.</li>
+        <li><strong>External (extern):</strong> Declared outside functions, used globally.</li>
+        <li><strong>Register:</strong> Stored in CPU registers for fast access, if possible.</li>
+        <li><strong>Static:</strong> Retains its value between function calls, scope is limited.</li>
+      </ul>
+    </section>
+
+    <section id="recursion">
+      <h2>Recursive Functions</h2>
+      <p>A recursive function is one that calls itself to solve smaller instances of the same problem.</p>
+      <h3>Example: Factorial</h3>
+      <pre><code>int factorial(int n) {
+  if (n == 0)
+    return 1;
+  else
+    return n * factorial(n - 1);
+}</code></pre>
+    </section>
+
+    <section id="arrays">
+      <h2>Passing Arrays to Functions</h2>
+      <p>In C, arrays are passed to functions by reference. Here's an example of a function that prints array elements:</p>
+      <pre><code>void printArray(int arr[], int size) {
+  for (int i = 0; i < size; i++) {
+    printf("%d ", arr[i]);
+  }
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>
