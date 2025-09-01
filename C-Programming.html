@@ -686,6 +686,125 @@ for(int i=0; i<3; i++) {
     <strong>Purpose:</strong> To change the name of a file.
   </p>
 </section>
+  <section id="random-access">
+  <h2>Random Access Functions</h2>
+
+  <p>
+    Random access functions allow a program to move the file pointer to a specific location in a file, 
+    enabling reading or writing data at any position instead of sequentially.
+  </p>
+
+  <h3>1. fseek()</h3>
+  <p>
+    <strong>Purpose:</strong> Moves the file pointer to a specific location in a file.<br>
+    <strong>Syntax:</strong> <code>int fseek(FILE *fp, long offset, int origin);</code><br>
+    <strong>Parameters:</strong> 
+    <ul>
+      <li><code>fp</code> – File pointer</li>
+      <li><code>offset</code> – Number of bytes to move</li>
+      <li><code>origin</code> – Position from where offset is added (<code>SEEK_SET</code>, <code>SEEK_CUR</code>, <code>SEEK_END</code>)</li>
+    </ul>
+    <em>Example:</em>
+    <pre><code>fseek(fp, 0, SEEK_SET);  // Move pointer to the beginning of the file</code></pre>
+  </p>
+
+  <h3>2. rewind()</h3>
+  <p>
+    <strong>Purpose:</strong> Moves the file pointer to the beginning of the file.<br>
+    <strong>Syntax:</strong> <code>void rewind(FILE *fp);</code><br>
+    <em>Example:</em>
+    <pre><code>rewind(fp);  // Resets file pointer to the start</code></pre>
+  </p>
+
+  <h3>3. ftell()</h3>
+  <p>
+    <strong>Purpose:</strong> Returns the current position of the file pointer.<br>
+    <strong>Syntax:</strong> <code>long ftell(FILE *fp);</code><br>
+    <em>Example:</em>
+    <pre><code>long pos = ftell(fp);
+printf("Current position: %ld", pos);</code></pre>
+  </p>
+
+  <h2>File Opening Modes</h2>
+
+  <ul>
+    <li><strong>r (Read):</strong> Opens a file for reading. File must exist.</li>
+    <li><strong>r+ (Read/Write):</strong> Opens a file for both reading and writing. File must exist.</li>
+    <li><strong>w (Write):</strong> Opens a file for writing. Creates a new file if it does not exist; truncates the file if it exists.</li>
+    <li><strong>w+ (Read/Write):</strong> Opens a file for reading and writing. Creates a new file if it does not exist; truncates the file if it exists.</li>
+    <li><strong>a (Append):</strong> Opens a file for writing at the end. Creates a new file if it does not exist.</li>
+    <li><strong>a+ (Read/Append):</strong> Opens a file for reading and writing at the end. Creates a new file if it does not exist.</li>
+  </ul>
+</section>
+<section id="file-steps">
+  <h2>Steps to Work with Files in C</h2>
+
+  <p>
+    Working with files in C involves several systematic steps to ensure proper reading, writing, and closing of files.
+  </p>
+
+  <h3>1. Define a File Pointer</h3>
+  <p>
+    Use the <code>FILE</code> type to declare a pointer that will reference the file.
+    <br><em>Example:</em>
+    <pre><code>FILE *fp;</code></pre>
+  </p>
+
+  <h3>2. Open File with Required Mode</h3>
+  <p>
+    Use <code>fopen()</code> to open the file in the desired mode (read, write, append, etc.).
+    <br><em>Example:</em>
+    <pre><code>fp = fopen("data.txt", "r");  // Open file for reading</code></pre>
+  </p>
+
+  <h3>3. Read, Write, Append Operations</h3>
+  <p>
+    <strong>Reading Data:</strong> Use functions like <code>fscanf(), fgets(), getc()</code> to read data from a file.<br>
+    <em>Example:</em>
+    <pre><code>char str[50];
+fgets(str, 50, fp);</code></pre>
+  </p>
+  <p>
+    <strong>Writing Data:</strong> Use functions like <code>fprintf(), fputs(), putc()</code> to write data to a file.<br>
+    <em>Example:</em>
+    <pre><code>fprintf(fp, "Hello World\n");</code></pre>
+  </p>
+  <p>
+    <strong>Appending Data:</strong> Open the file in append mode <code>("a" or "a+")</code> to add new data without overwriting existing content.<br>
+    <em>Example:</em>
+    <pre><code>fp = fopen("data.txt", "a");
+fprintf(fp, "New line added\n");</code></pre>
+  </p>
+
+  <h3>4. Close the File</h3>
+  <p>
+    Always close the file using <code>fclose()</code> to free resources and ensure data integrity.
+    <br><em>Example:</em>
+    <pre><code>fclose(fp);</code></pre>
+  </p>
+
+  <h3>End of File (EOF)</h3>
+  <p>
+    The end-of-file marker indicates that no more data is available for reading. Functions like <code>feof()</code> 
+    can be used to check for EOF while reading a file.
+    <br><em>Example:</em>
+    <pre><code>while(!feof(fp)) {
+    fgets(buffer, 100, fp);
+    printf("%s", buffer);
+}</code></pre>
+  </p>
+
+  <h3>typedef Keyword in C</h3>
+  <p>
+    The <code>typedef</code> keyword is used to create a new name (alias) for an existing data type, making the code more readable.
+    <br><em>Syntax:</em>
+    <pre><code>typedef existing_type new_name;</code></pre>
+    <em>Example:</em>
+    <pre><code>typedef unsigned int uint;
+uint age = 25;</code></pre>
+  </p>
+</section>
+
   </main>
 </body>
 </html>
