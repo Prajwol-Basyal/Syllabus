@@ -100,6 +100,43 @@
       <pre><code>return_type function_name(parameter_list) {
   // function body
 }</code></pre>
+      <p>
+  <strong>Prototype:</strong> A function prototype declares the function's name, return type, and parameters before it is defined. 
+  It tells the compiler what to expect, allowing the function to be called before its actual definition.
+  <br><strong>Syntax:</strong>
+  <pre><code>return_type function_name(parameter_list);</code></pre>
+  <em>Example:</em> <code>int add(int a, int b);</code>
+</p>
+
+<p>
+  <strong>Function Definition:</strong> The function definition contains the actual body of the function, including the statements 
+  that perform the task. It specifies what the function does when called.
+  <br><strong>Syntax:</strong>
+  <pre><code>return_type function_name(parameter_list) {
+    // function body
+}</code></pre>
+  <em>Example:</em>
+  <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+</p>
+
+<p>
+  <strong>Function Call:</strong> A function call is the statement that executes the function. When a function is called, 
+  control is transferred to the function, and the code inside it runs.
+  <br><strong>Syntax:</strong>
+  <pre><code>function_name(argument_list);</code></pre>
+  <em>Example:</em> <code>int sum = add(5, 10);</code>
+</p>
+
+<p>
+  <strong>Return Statement:</strong> The return statement sends a value back to the caller of the function. 
+  If the function has a non-void return type, it must return a value of that type.
+  <br><strong>Syntax:</strong>
+  <pre><code>return expression;</code></pre>
+  <em>Example:</em> <code>return a + b;</code>
+</p>
+
       <h3>Types of Functions</h3>
       <ul>
         <li><strong>Library Functions:</strong> Predefined in C, such as <code>printf()</code>, <code>scanf()</code>.</li>
@@ -113,7 +150,31 @@
         <li><strong>Return Type:</strong> Specifies what the function returns.</li>
       </ul>
     </section>
+    <section id="functions">
+  <p>
+    A <strong>Function</strong> in programming or databases is a self-contained block of code or logic 
+    that performs a specific task. Functions improve modularity, make programs easier to read, 
+    and allow code reuse without rewriting the same instructions multiple times.
+  </p>
 
+  <h2>Functions</h2>
+
+  <h3>Purpose of Functions</h3>
+  <ul>
+    <li>To perform a specific task or computation.</li>
+    <li>To break down large and complex problems into smaller, manageable parts.</li>
+    <li>To promote code reuse and avoid repetition.</li>
+    <li>To improve readability and maintainability of code.</li>
+  </ul>
+
+  <h3>Advantages of Functions</h3>
+  <ul>
+    <li><strong>Reusability:</strong> Functions can be used multiple times in different parts of a program.</li>
+    <li><strong>Modularity:</strong> Programs are divided into logical parts, making them easier to understand.</li>
+    <li><strong>Debugging:</strong> Errors can be isolated and fixed easily within functions.</li>
+    <li><strong>Maintenance:</strong> Changes in logic can be made in one place without affecting the entire program.</li>
+    <li><strong>Collaboration:</strong> Different developers can work on different functions independently.</li>
+  </ul></section>
     <section id="categories">
       <h2>Function Categories with Examples</h2>
       <ul>
@@ -139,6 +200,42 @@
         </li>
       </ul>
     </section>
+<section id="passing-arguments">
+  <h2>Passing Arguments</h2>
+  <p>
+    In programming, <strong>passing arguments</strong> refers to providing input values to a function when it is called. 
+    There are two primary ways to pass arguments: <strong>Call By Value</strong> and <strong>Call By Reference</strong>.
+  </p>
+
+  <h3>Call By Value</h3>
+  <p>
+    In <strong>Call By Value</strong>, a copy of the actual value is passed to the function. 
+    Changes made to the parameter inside the function do not affect the original variable.
+    <br><strong>Syntax:</strong>
+    <pre><code>void functionName(int x) {
+    x = x + 10;
+}
+int main() {
+    int a = 5;
+    functionName(a);  // 'a' remains 5
+}</code></pre>
+  </p>
+
+  <h3>Call By Reference</h3>
+  <p>
+    In <strong>Call By Reference</strong>, the address of the variable is passed to the function. 
+    Changes made to the parameter inside the function directly affect the original variable.
+    <br><strong>Syntax:</strong>
+    <pre><code>void functionName(int &x) {
+    x = x + 10;
+}
+int main() {
+    int a = 5;
+    functionName(a);  // 'a' becomes 15
+}</code></pre>
+  </p>
+</section>
+
 
     <section id="storage">
       <h2>Storage Classes</h2>
