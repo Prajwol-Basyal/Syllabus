@@ -268,8 +268,169 @@ int main() {
   else
     return n * factorial(n - 1);
 }</code></pre>
-    </section>
+      <h3>Advantages of Recursive Functions</h3>
+<ul>
+    <li><strong>Simpler Code:</strong> Recursive functions can make code shorter and easier to read for problems that have a natural recursive structure, like factorials, Fibonacci, or tree traversals.</li>
+    <li><strong>Modularity:</strong> Each recursive call handles a smaller part of the problem, improving modularity and problem decomposition.</li>
+    <li><strong>Ease of Implementation:</strong> Problems that are difficult to solve iteratively can often be implemented more easily with recursion.</li>
+    <li><strong>Reduced Code Duplication:</strong> Eliminates the need for loops and repeated code in some complex algorithms.</li>
+</ul>
 
+<h3>Disadvantages of Recursive Functions</h3>
+<ul>
+    <li><strong>Memory Usage:</strong> Each recursive call adds a new layer to the call stack, which can lead to high memory consumption.</li>
+    <li><strong>Performance Overhead:</strong> Function calls are expensive in terms of execution time compared to loops.</li>
+    <li><strong>Risk of Stack Overflow:</strong> Deep or infinite recursion can cause the program to crash due to stack overflow.</li>
+    <li><strong>Harder to Debug:</strong> Debugging recursive functions can be more challenging, especially for complex recursion.</li>
+</ul>
+
+    </section>
+  <section id="structure">
+  <h2>Structure</h2>
+
+  <h3>Introduction and Syntax</h3>
+  <p>
+    A <strong>structure</strong> in C/C++ is a user-defined data type that allows grouping variables of different types under a single name. 
+    Structures help organize complex data in a meaningful way.
+    <br><strong>Syntax:</strong>
+    <pre><code>struct StructureName {
+    dataType member1;
+    dataType member2;
+    ...
+};</code></pre>
+    <em>Example:</em>
+    <pre><code>struct Student {
+    int id;
+    char name[50];
+    float marks;
+};</code></pre>
+  </p>
+
+  <h3>Structure Size</h3>
+  <p>
+    The size of a structure is the sum of the sizes of its members, including padding added by the compiler for alignment.
+    <br><em>Example:</em>
+    <pre><code>printf("Size of Student: %lu", sizeof(struct Student));</code></pre>
+  </p>
+
+  <h3>Accessing Members of Structure</h3>
+  <p>
+    Members of a structure are accessed using the dot <code>.</code> operator.
+    <br><em>Example:</em>
+    <pre><code>struct Student s1;
+s1.id = 101;
+strcpy(s1.name, "Prajwol");
+s1.marks = 88.5;
+printf("Name: %s, Marks: %.2f", s1.name, s1.marks);</code></pre>
+  </p>
+
+  <h3>Nested Structure</h3>
+  <p>
+    Structures can be nested, meaning a structure can have another structure as a member.
+    <br><em>Example:</em>
+    <pre><code>struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+struct Student {
+    int id;
+    char name[50];
+    struct Date dob;  // nested structure
+};</code></pre>
+  </p>
+
+  <h3>Array of Structure</h3>
+  <p>
+    You can create an array of structures to store multiple records of the same type.
+    <br><em>Example:</em>
+    <pre><code>struct Student s[3];
+s[0].id = 101;
+strcpy(s[0].name, "Prajwol");
+s[0].marks = 88.5;</code></pre>
+  </p>
+
+  <h3>Passing Structure to Function</h3>
+  <p>
+    Structures can be passed to functions either by value or by reference (using pointers).
+    <br><em>Example:</em>
+    <pre><code>void printStudent(struct Student s) {
+    printf("ID: %d, Name: %s, Marks: %.2f", s.id, s.name, s.marks);
+}
+
+int main() {
+    struct Student s1 = {101, "Prajwol", 88.5};
+    printStudent(s1);
+    return 0;
+}</code></pre>
+  </p>
+</section>
+    <section id="union">
+  <h2>Union</h2>
+
+  <h3>Introduction and Syntax</h3>
+  <p>
+    A <strong>union</strong> in C/C++ is a user-defined data type similar to a structure, but with a key difference: 
+    all members of a union share the same memory location. This means that at any given time, a union can store 
+    only one of its members, making it memory-efficient for storing variables where only one value is needed at a time.
+    <br><strong>Syntax:</strong>
+    <pre><code>union UnionName {
+    dataType member1;
+    dataType member2;
+    ...
+};</code></pre>
+    <em>Example:</em>
+    <pre><code>union Data {
+    int i;
+    float f;
+    char str[20];
+};</code></pre>
+  </p>
+
+  <h3>Comparison Between Structure and Union</h3>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Structure</th>
+        <th>Union</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Memory Allocation</td>
+        <td>Each member of a structure gets its own memory location. The total size of a structure is the sum of the sizes of all its members, possibly including padding.</td>
+        <td>All members of a union share the same memory location. The total size of a union is equal to the size of its largest member, making it memory-efficient.</td>
+      </tr>
+      <tr>
+        <td>Value Storage</td>
+        <td>Can store values for all members simultaneously. Each member can hold independent data.</td>
+        <td>Can store value for only one member at a time. Assigning a value to one member overwrites the previous value.</td>
+      </tr>
+      <tr>
+        <td>Accessing Members</td>
+        <td>All members can be accessed independently without affecting others.</td>
+        <td>Only the last assigned member can be accessed meaningfully; accessing other members may give unexpected results.</td>
+      </tr>
+      <tr>
+        <td>Use Case</td>
+        <td>Used when all members need to store data simultaneously, such as a student record with multiple attributes.</td>
+        <td>Used when memory is limited and only one value is needed at a time, such as storing a variable that may hold int, float, or char.</td>
+      </tr>
+      <tr>
+        <td>Size</td>
+        <td>Generally larger in size because memory is allocated for each member.</td>
+        <td>Smaller in size because memory is shared among all members.</td>
+      </tr>
+      <tr>
+        <td>Initialization</td>
+        <td>All members can be initialized individually at the time of declaration.</td>
+        <td>Only one member can be initialized at the time of declaration; the rest remain unused.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
     <section id="arrays">
       <h2>Passing Arrays to Functions</h2>
       <p>In C, arrays are passed to functions by reference. Here's an example of a function that prints array elements:</p>
@@ -279,6 +440,252 @@ int main() {
   }
 }</code></pre>
     </section>
+<section id="pointers">
+  <h2>Pointers</h2>
+
+  <h3>Introduction and Syntax</h3>
+  <p>
+    A <strong>pointer</strong> is a variable that stores the memory address of another variable. Pointers provide a powerful way 
+    to directly access memory, allowing efficient manipulation of data, dynamic memory allocation, and passing variables by reference.
+    <br><strong>Syntax:</strong>
+    <pre><code>dataType *pointerName;</code></pre>
+    <em>Example:</em> <code>int *ptr;</code>
+  </p>
+
+  <h3>Usage and Working</h3>
+  <p>
+    Pointers are widely used to manipulate memory, access arrays efficiently, implement dynamic data structures, and work with functions. 
+    The value stored in a pointer is the address of a variable, which can be dereferenced using the <code>*</code> operator to access the value.
+  </p>
+
+  <h3>Concept of Value and Address</h3>
+  <p>
+    Every variable in memory has an <strong>address</strong> and a <strong>value</strong>. Pointers store the address of variables, 
+    and dereferencing the pointer allows access to the value stored at that address.
+    <br><em>Example:</em>
+    <pre><code>int a = 10;
+int *ptr = &a;  // &a gives the address of 'a'
+printf("Value: %d, Address: %p", *ptr, ptr);</code></pre>
+  </p>
+
+  <h3>Declaration and Initialization</h3>
+  <p>
+    <strong>Declaration:</strong> <code>dataType *pointerName;</code> <br>
+    <strong>Initialization:</strong> <code>pointerName = &variableName;</code>
+    <br><em>Example:</em>
+    <pre><code>int a = 20;
+int *ptr = &a;</code></pre>
+  </p>
+
+  <h3>Pointer and Function</h3>
+  <p>
+    Pointers can be passed to functions to allow modification of variables in the calling function.
+    <br><em>Example:</em>
+    <pre><code>void increment(int *p) {
+    (*p)++;
+}
+int main() {
+    int a = 5;
+    increment(&a);
+    printf("%d", a); // Output: 6
+}</code></pre>
+  </p>
+
+  <h3>Call by Reference</h3>
+  <p>
+    Passing a pointer to a function is a form of <strong>call by reference</strong>, which allows the function to modify the actual variable.
+    <br><em>Example:</em>
+    <pre><code>void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+int main() {
+    int a = 10, b = 20;
+    swap(&a, &b);
+    printf("a=%d, b=%d", a, b); // Output: a=20, b=10
+}</code></pre>
+  </p>
+
+  <h3>Comparison Between Call by Value and Call by Reference</h3>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Call by Value</th>
+        <th>Call by Reference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Effect on Original Variable</td>
+        <td>The function works on a copy; original variable remains unchanged.</td>
+        <td>The function works on the original variable; changes reflect outside the function.</td>
+      </tr>
+      <tr>
+        <td>Memory</td>
+        <td>Separate memory allocated for the copy.</td>
+        <td>No extra memory required; uses the original variable's address.</td>
+      </tr>
+      <tr>
+        <td>Safety</td>
+        <td>Safer; original data cannot be accidentally modified.</td>
+        <td>Less safe; unintended changes can affect the original variable.</td>
+      </tr>
+      <tr>
+        <td>Use Case</td>
+        <td>When the original data should not be changed.</td>
+        <td>When the function needs to modify the original data.</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>May be slower for large data because of copying.</td>
+        <td>Faster for large data since no copy is made.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+  <h3>Pointer with Arrays</h3>
+  <p>
+    Pointers and arrays are closely related. The name of an array acts as a pointer to its first element.
+    <br><em>Example:</em>
+    <pre><code>int arr[3] = {10, 20, 30};
+int *ptr = arr;  // ptr points to arr[0]
+for(int i=0; i<3; i++) {
+    printf("%d ", *(ptr + i));
+}</code></pre>
+  </p>
+
+  <h3>Advantages</h3>
+  <ul>
+    <li>Efficient memory usage by directly accessing memory locations.</li>
+    <li>Allows dynamic memory allocation.</li>
+    <li>Enables passing large structures or arrays to functions without copying.</li>
+    <li>Facilitates implementation of data structures like linked lists, trees, and graphs.</li>
+  </ul>
+
+  <h3>Disadvantages</h3>
+  <ul>
+    <li>Improper use can lead to memory leaks or dangling pointers.</li>
+    <li>Complexity: harder to understand and debug for beginners.</li>
+    <li>Incorrect pointer arithmetic can cause program crashes.</li>
+    <li>Security risk: pointers can be exploited if not managed properly.</li>
+  </ul>
+</section>
+<section id="file-handling">
+  <h2>File Handling in C</h2>
+
+  <h3>Concept of Data File</h3>
+  <p>
+    A <strong>data file</strong> is a collection of related information stored on a secondary storage device such as a hard disk. 
+    Files provide a way to store data permanently, allowing programs to save and retrieve data even after execution ends.
+  </p>
+
+  <h3>Need for File Handling</h3>
+  <p>
+    File handling allows a program to:
+  </p>
+  <ul>
+    <li>Store data permanently beyond the life of the program.</li>
+    <li>Retrieve and update data efficiently.</li>
+    <li>Share data between different programs.</li>
+    <li>Maintain large amounts of information without using large amounts of RAM.</li>
+  </ul>
+
+  <h3>Types of Files</h3>
+  <ul>
+    <li><strong>Sequential Files:</strong> Data is stored and accessed in a sequential manner, one record after another.</li>
+    <li><strong>Random (Direct) Files:</strong> Data can be accessed directly at any location using file pointers, without reading sequentially.</li>
+  </ul>
+
+  <h3>File Handling Functions</h3>
+
+  <p>
+    <strong>1. fopen()</strong> - Opens a file.<br>
+    <strong>Syntax:</strong> <code>FILE *fopen("filename", "mode");</code><br>
+    <strong>Purpose:</strong> To open a file in a specific mode (read, write, append, etc.).
+  </p>
+
+  <p>
+    <strong>2. fclose()</strong> - Closes a file.<br>
+    <strong>Syntax:</strong> <code>fclose(file_pointer);</code><br>
+    <strong>Purpose:</strong> To close an open file and release resources.
+  </p>
+
+  <p>
+    <strong>3. getc()</strong> - Reads a character from a file.<br>
+    <strong>Syntax:</strong> <code>int ch = getc(file_pointer);</code><br>
+    <strong>Purpose:</strong> To read a single character from a file.
+  </p>
+
+  <p>
+    <strong>4. putc()</strong> - Writes a character to a file.<br>
+    <strong>Syntax:</strong> <code>putc(character, file_pointer);</code><br>
+    <strong>Purpose:</strong> To write a single character to a file.
+  </p>
+
+  <p>
+    <strong>5. fprintf()</strong> - Writes formatted output to a file.<br>
+    <strong>Syntax:</strong> <code>fprintf(file_pointer, "format", variables);</code><br>
+    <strong>Purpose:</strong> To write formatted data (like printf) to a file.
+  </p>
+
+  <p>
+    <strong>6. fscanf()</strong> - Reads formatted input from a file.<br>
+    <strong>Syntax:</strong> <code>fscanf(file_pointer, "format", &variables);</code><br>
+    <strong>Purpose:</strong> To read formatted data (like scanf) from a file.
+  </p>
+
+  <p>
+    <strong>7. getw()</strong> - Reads an integer from a file.<br>
+    <strong>Syntax:</strong> <code>int n = getw(file_pointer);</code><br>
+    <strong>Purpose:</strong> To read a single integer from a file (less commonly used).
+  </p>
+
+  <p>
+    <strong>8. putw()</strong> - Writes an integer to a file.<br>
+    <strong>Syntax:</strong> <code>putw(integer, file_pointer);</code><br>
+    <strong>Purpose:</strong> To write a single integer to a file.
+  </p>
+
+  <p>
+    <strong>9. fgets()</strong> - Reads a string from a file.<br>
+    <strong>Syntax:</strong> <code>fgets(buffer, size, file_pointer);</code><br>
+    <strong>Purpose:</strong> To read a line or string from a file safely.
+  </p>
+
+  <p>
+    <strong>10. fputs()</strong> - Writes a string to a file.<br>
+    <strong>Syntax:</strong> <code>fputs(string, file_pointer);</code><br>
+    <strong>Purpose:</strong> To write a string to a file.
+  </p>
+
+  <p>
+    <strong>11. fread()</strong> - Reads binary data from a file.<br>
+    <strong>Syntax:</strong> <code>fread(buffer, size, count, file_pointer);</code><br>
+    <strong>Purpose:</strong> To read a block of binary data from a file.
+  </p>
+
+  <p>
+    <strong>12. fwrite()</strong> - Writes binary data to a file.<br>
+    <strong>Syntax:</strong> <code>fwrite(buffer, size, count, file_pointer);</code><br>
+    <strong>Purpose:</strong> To write a block of binary data to a file.
+  </p>
+
+  <p>
+    <strong>13. remove()</strong> - Deletes a file.<br>
+    <strong>Syntax:</strong> <code>remove("filename");</code><br>
+    <strong>Purpose:</strong> To delete a file from the storage.
+  </p>
+
+  <p>
+    <strong>14. rename()</strong> - Renames a file.<br>
+    <strong>Syntax:</strong> <code>rename("oldname", "newname");</code><br>
+    <strong>Purpose:</strong> To change the name of a file.
+  </p>
+</section>
   </main>
 </body>
 </html>
