@@ -204,6 +204,48 @@
       <h2>Data Dictionary</h2>
       <p>A data dictionary is a centralized repository of information about data such as meaning, relationships to other data, origin, usage, and format.</p>
     </section>
+  <section id="data-types">
+  <h2>Data Types</h2>
+  <p>Data types specify the kind of data that can be stored in a database field or a programming variable. They are essential because they define the nature of data, the amount of space required, and the operations that can be performed on the data. Choosing the correct data type ensures data integrity and efficient storage.</p>
+
+  <h3>Types of Data in Databases</h3>
+  <p>Databases support various data types to handle different forms of data. Some of the commonly used data types include:</p>
+  
+  <ul>
+    <li><strong>Integer:</strong> Represents whole numbers, both positive and negative, without decimal points. Typically used for counting and indexing.</li>
+    <li><strong>Float / Real:</strong> Represents approximate numeric data with fractional parts, using decimal points. Useful when precision is less critical.</li>
+    <li><strong>Decimal / Numeric:</strong> Represents exact numeric data with fixed decimal precision. Often used in financial calculations to avoid rounding errors.</li>
+    <li><strong>Char:</strong> Fixed-length character data. Useful for storing codes or short strings of fixed size.</li>
+    <li><strong>Varchar:</strong> Variable-length character data. It stores text strings of varying sizes, saving space compared to fixed-length types.</li>
+    <li><strong>Text:</strong> Used to store large amounts of text data, such as descriptions or comments.</li>
+    <li><strong>Date and Time:</strong> Used to store calendar dates and time values. Supports operations like date arithmetic and formatting.</li>
+    <li><strong>Boolean:</strong> Stores truth values, TRUE or FALSE, used for logical conditions.</li>
+    <li><strong>Binary:</strong> Used to store binary data such as images, audio, or any file in its raw format.</li>
+  </ul>
+
+  <h3>Data Types in Programming Languages (C Language)</h3>
+  <p>In programming languages like C, data types define the type of variables and how much memory they occupy. Common data types in C include:</p>
+  
+  <ul>
+    <li><strong>int:</strong> Integer type to store whole numbers.</li>
+    <li><strong>float:</strong> Single precision floating-point number.</li>
+    <li><strong>double:</strong> Double precision floating-point number, for greater accuracy.</li>
+    <li><strong>char:</strong> Character type, used to store single characters.</li>
+    <li><strong>void:</strong> Represents the absence of value, used for functions that do not return a value.</li>
+  </ul>
+
+  <h3>Importance of Choosing the Right Data Type</h3>
+  <p>Choosing the appropriate data type is important for several reasons:</p>
+  <ul>
+    <li><strong>Storage Efficiency:</strong> Different data types require different amounts of memory. Using the correct type saves storage space.</li>
+    <li><strong>Data Integrity:</strong> Data types restrict the kind of data that can be stored, preventing invalid data entries.</li>
+    <li><strong>Performance:</strong> Correct data types can improve database query speeds and program execution times.</li>
+    <li><strong>Data Validation:</strong> Data types help in validating inputs by limiting the type and range of values.</li>
+  </ul>
+
+  <h3>Examples of Data Types and Usage</h3>
+  <p>For example, an <code>Employee ID</code> might use an integer type, while <code>Employee Name</code> would use a varchar or string type. Salary fields may use decimal types to accommodate currency values accurately.</p>
+</section>
 
     <section id="dbms">
       <h2>Database Management System</h2>
@@ -900,3 +942,4 @@ WHERE Id = 3;</code></pre>
 
 </body>
 </html>
+
