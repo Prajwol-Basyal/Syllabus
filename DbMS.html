@@ -418,6 +418,7 @@
     </section>
 
 <section id="dba">
+  <h2>Database Administrator (DBA)</h2>
   <p>
     A <strong>Database Administrator (DBA)</strong> is a professional responsible for the installation, configuration, 
     management, and maintenance of databases within an organization. The DBA ensures that databases are secure, 
@@ -425,7 +426,6 @@
     DBAs play a critical role in safeguarding data, optimizing performance, and implementing security policies.
   </p>
 
-  <h2>Database Administrator (DBA)</h2>
 
   <h3>Key Responsibilities</h3>
   <ul>
@@ -445,6 +445,181 @@
     <li><strong>Maintenance:</strong> Regular updates, patches, and troubleshooting issues.</li>
   </ul>
 </section>
+
+<section id="er-diagram">
+  <p>
+    An <strong>Entity-Relationship (ER) Diagram</strong> is a visual representation of data and the relationships 
+    between entities in a database system. It is widely used in database design to model the logical structure 
+    of databases and to simplify complex relationships. ER diagrams help database designers and developers 
+    understand data requirements clearly before implementing the database.
+  </p>
+
+  <h2>ER Diagrams</h2>
+
+  <h3>Entity</h3>
+  <p>
+    An <strong>Entity</strong> represents a real-world object or concept that can be identified distinctly. 
+    Examples include <em>Student</em>, <em>Course</em>, or <em>Employee</em>.
+  </p>
+
+  <h3>Attributes</h3>
+  <p>
+    <strong>Attributes</strong> describe the properties or characteristics of an entity. 
+    For example, a <em>Student</em> entity may have attributes such as <em>Student_ID</em>, <em>Name</em>, and <em>Age</em>.
+  </p>
+
+  <h3>Relationships</h3>
+  <p>
+    A <strong>Relationship</strong> shows how two or more entities are associated with each other. 
+    For example, a <em>Student</em> "enrolls in" a <em>Course</em>.
+  </p>
+
+  <h3>Cardinality and Degree</h3>
+  <ul>
+    <li><strong>Cardinality:</strong> Defines the number of instances of one entity that can be associated with instances of another entity (e.g., One-to-One, One-to-Many, Many-to-Many).</li>
+    <li><strong>Degree:</strong> Refers to the number of entities involved in a relationship (e.g., unary, binary, ternary).</li>
+  </ul>
+
+  <h3>Symbols and Their Meanings</h3>
+  <ul>
+    <li><strong>Rectangle:</strong> Represents an Entity.</li>
+    <li><strong>Ellipse (Oval):</strong> Represents an Attribute.</li>
+    <li><strong>Diamond:</strong> Represents a Relationship.</li>
+    <li><strong>Line:</strong> Connects entities to attributes or entities to relationships.</li>
+    <li><strong>Double Rectangle:</strong> Represents a Weak Entity.</li>
+    <li><strong>Double Ellipse:</strong> Represents a Multivalued Attribute.</li>
+    <li><strong>Underline:</strong> Denotes a Primary Key attribute.</li>
+  </ul>
+</section>
+<section id="sql">
+  <p>
+    <strong>SQL (Structured Query Language)</strong> is a standard language used to manage and manipulate relational databases. 
+    It provides commands for defining database structures, inserting, updating, and retrieving data, as well as controlling access. 
+    SQL is mainly divided into categories such as <strong>DDL</strong> (Data Definition Language) and <strong>DML</strong> (Data Manipulation Language).
+  </p>
+
+  <h2>SQL (DDL and DML)</h2>
+
+  <h3>DDL (Data Definition Language)</h3>
+  <p>
+    DDL is used to define and manage database structures. Examples of DDL commands include:
+  </p>
+  <ul>
+    <li><code>CREATE</code> – Creates a new database or table.</li>
+    <li><code>ALTER</code> – Modifies an existing table structure.</li>
+    <li><code>DROP</code> – Deletes a database or table.</li>
+    <li><code>TRUNCATE</code> – Removes all records from a table but keeps its structure.</li>
+  </ul>
+
+  <h3>DML (Data Manipulation Language)</h3>
+  <p>
+    DML is used to manipulate and manage the data stored in tables. Examples of DML commands include:
+  </p>
+  <ul>
+    <li><code>INSERT</code> – Adds new records to a table.</li>
+    <li><code>UPDATE</code> – Modifies existing records.</li>
+    <li><code>DELETE</code> – Removes records from a table.</li>
+    <li><code>SELECT</code> – Retrieves data from one or more tables.</li>
+  </ul>
+
+  <h3>Data Constraints</h3>
+  <p>
+    Constraints are rules applied to table columns to ensure accuracy and consistency of data.
+  </p>
+  <ul>
+    <li><strong>NOT NULL:</strong> Ensures a column cannot have NULL values.</li>
+    <li><strong>UNIQUE:</strong> Ensures all values in a column are unique.</li>
+    <li><strong>PRIMARY KEY:</strong> A combination of <em>NOT NULL</em> and <em>UNIQUE</em>, uniquely identifies each row.</li>
+    <li><strong>AUTO INCREMENT:</strong> Automatically generates sequential numeric values for new rows.</li>
+  </ul>
+
+  <h3>Operators</h3>
+  <p>
+    Operators are used in SQL conditions to filter and combine data.
+  </p>
+  <ul>
+    <li><strong>AND:</strong> Returns records if all conditions are true.</li>
+    <li><strong>OR:</strong> Returns records if at least one condition is true.</li>
+    <li><strong>NOT:</strong> Returns records if a condition is not true.</li>
+  </ul>
+
+  <h3>WHERE Clause</h3>
+  <p>
+    The <code>WHERE</code> clause is used to filter records based on specific conditions.
+    <br><em>Example:</em> <code>SELECT * FROM Students WHERE Age &gt; 18;</code>
+  </p>
+
+  <h3>ORDER BY</h3>
+  <p>
+    The <code>ORDER BY</code> clause is used to sort the result set in ascending (ASC) or descending (DESC) order.
+    <br><em>Example:</em> <code>SELECT * FROM Students ORDER BY Name ASC;</code>
+  </p>
+</section>
+<section id="sql-joins">
+  <p>
+    <strong>SQL JOIN</strong> is used to combine rows from two or more tables based on a related column between them. 
+    Joins help in retrieving meaningful information spread across multiple tables. 
+    The common types of JOINs are <strong>INNER JOIN</strong>, <strong>LEFT JOIN</strong>, <strong>RIGHT JOIN</strong>, and <strong>FULL JOIN</strong>.
+  </p>
+
+  <h2>SQL JOINs</h2>
+
+  <h3>1. INNER JOIN</h3>
+  <p>
+    Returns only the rows that have matching values in both tables.
+  </p>
+  <pre>
+<code>
+SELECT Students.Name, Courses.CourseName
+FROM Students
+INNER JOIN Courses
+ON Students.CourseID = Courses.CourseID;
+</code>
+  </pre>
+
+  <h3>2. LEFT JOIN (or LEFT OUTER JOIN)</h3>
+  <p>
+    Returns all rows from the left table and the matching rows from the right table. 
+    If there is no match, NULL values are returned for columns from the right table.
+  </p>
+  <pre>
+<code>
+SELECT Students.Name, Courses.CourseName
+FROM Students
+LEFT JOIN Courses
+ON Students.CourseID = Courses.CourseID;
+</code>
+  </pre>
+
+  <h3>3. RIGHT JOIN (or RIGHT OUTER JOIN)</h3>
+  <p>
+    Returns all rows from the right table and the matching rows from the left table. 
+    If there is no match, NULL values are returned for columns from the left table.
+  </p>
+  <pre>
+<code>
+SELECT Students.Name, Courses.CourseName
+FROM Students
+RIGHT JOIN Courses
+ON Students.CourseID = Courses.CourseID;
+</code>
+  </pre>
+
+  <h3>4. FULL JOIN (or FULL OUTER JOIN)</h3>
+  <p>
+    Returns all rows when there is a match in either left or right table. 
+    Rows without matches in one table will show NULL for that table’s columns.
+  </p>
+  <pre>
+<code>
+SELECT Students.Name, Courses.CourseName
+FROM Students
+FULL JOIN Courses
+ON Students.CourseID = Courses.CourseID;
+</code>
+  </pre>
+</section>
+
 
   <!-- ===================== -->
 <!-- Past Year Q/A Section -->
@@ -1017,6 +1192,7 @@ WHERE Id = 3;</code></pre>
 
 </body>
 </html>
+
 
 
 
